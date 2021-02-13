@@ -1,8 +1,0 @@
----
-- hosts: all
-  become: yes
-
-  tasks:
-  - name: shell check
-    shell: uptime
-
