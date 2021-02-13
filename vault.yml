@@ -1,0 +1,12 @@
+---
+- name: vault check
+  hosts: all
+  become: true
+  vars_files:
+       - secret.yml   
+  tasks:
+  - name: create repo
+    git:
+       repo: https://jatin-wipro:{{ password }}@github.com/jatin-wipro/vault
+       dest: /opt/gitcheck
+
